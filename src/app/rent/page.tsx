@@ -38,6 +38,23 @@ export default function Rent() {
           {/* Catergories */}
           <Categories />
         </div>
+        <div>
+          <div>
+            <h3>Rent Your Device Now</h3>
+            <div className="flex gap-5">
+              <div>Sell</div>
+              <div>Sell</div>
+              <div>Sell</div>
+              <div>Sell</div>
+              <div>Sell</div>
+            </div>
+          </div>
+          <div>
+            <h3>Rent Equipment</h3>
+          </div>
+          <div></div>
+          <div></div>
+        </div>
       </div>
     </div>
   );

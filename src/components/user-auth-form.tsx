@@ -5,21 +5,12 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 import { signIn } from "next-auth/react";
-import Google from "next-auth/providers/google";
 
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
-
-  async function onSubmit(event: React.SyntheticEvent) {
-    event.preventDefault();
-    setIsLoading(true);
-
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 3000);
-  }
 
   return (
     <div className={cn("grid gap-6", className)} {...props}>
@@ -27,8 +18,13 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
         variant="outline"
         type="button"
         disabled={isLoading}
-        onClick={async () => {
+        onClick={async (event: React.SyntheticEvent) => {
+          event.preventDefault();
+          setIsLoading(true);
           await signIn("google");
+          setTimeout(() => {
+            setIsLoading(false);
+          }, 3000);
         }}
       >
         {isLoading ? (
@@ -77,8 +73,14 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
         variant="outline"
         type="button"
         disabled={isLoading}
-        onClick={async () => {
+        onClick={async (event: React.SyntheticEvent) => {
+          event.preventDefault();
+          setIsLoading(true);
           await signIn("github");
+
+          setTimeout(() => {
+            setIsLoading(false);
+          }, 3000);
         }}
       >
         {isLoading ? (
