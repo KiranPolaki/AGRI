@@ -1,0 +1,3 @@
+https://authjs.dev/getting-started/migrating-to-v5#authenticating-server-side
+
+https://medium.com/@pawanrijal/building-authentication-in-a-next-js-14-app-using-nextauth-and-prisma-59c9d67a0eca
