@@ -1,10 +1,43 @@
 import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
-import { MessageSquareHeart, QrCode, Send, Share2 } from "lucide-react";
+import {
+  FacebookIcon,
+  Linkedin,
+  MessageSquareHeart,
+  QrCode,
+  Send,
+  Share2,
+  Twitter,
+} from "lucide-react";
 import Image from "next/image";
 import master from "../public/signin.jpg";
 import AvatarCircles from "@/components/ui/avatar-circles";
 import { Timeline } from "@/components/ui/timeline";
+import farmer from "../public/farmerStep1.png";
+import step20 from "../public/step2.png";
+import step21 from "../public/step21.png";
+import step30 from "../public/farm-social-1.jpg";
+import step31 from "../public/farmspary.jpg";
+import step32 from "../public/pump.png";
+import step1 from "../public/step1.jpg";
+import step12 from "../public/step12.jpg";
+import return2 from "../public/return2.png";
+import return1 from "../public/return1.png";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Iphone15Pro from "@/components/ui/iphone-15-pro";
 
 export default function Home() {
   const avatarUrls = [
@@ -16,13 +49,14 @@ export default function Home() {
 
   const data = [
     {
-      title: "2024",
+      title: "Check Price",
       content: (
         <div>
-          <p className="text-neutral-800 dark:text-neutral-800 text-xs md:text-sm font-normal mb-8">
-            Built and launched Aceternity UI and Aceternity UI Pro from scratch
+          <p className="text-neutral-800 dark:text-neutral-800 text-lg md:text-xl font-medium mb-8">
+            Select your Equipemnt & tell us about its current condition, and our
+            advanced AI tech will tailor make the perfect price for you.
           </p>
-          <div className="grid grid-cols-2 gap-4">
+          {/* <div className="grid grid-cols-2 gap-4">
             <Image
               src=""
               alt="startup template"
@@ -51,111 +85,203 @@ export default function Home() {
               height={500}
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
+          </div> */}
+          <div className="w-full h-full flex items-center justify-center gap-4">
+            <Image
+              src={farmer}
+              alt="farmerhappy"
+              width="350"
+              height="350"
+              placeholder="blur"
+              className="rounded-lg"
+            ></Image>
+            <div className="flex flex-col gap-2">
+              <Image
+                src={step12}
+                alt="farmerhappy"
+                width="325"
+                height="325"
+                placeholder="blur"
+                className="rounded-lg lg:block hidden"
+              ></Image>
+              <Image
+                src={step1}
+                alt="farmerhappy"
+                width="325"
+                height="325"
+                placeholder="blur"
+                className="rounded-lg lg:block hidden"
+              ></Image>
+            </div>
           </div>
         </div>
       ),
     },
     {
-      title: "Early 2023",
+      title: "Rent it",
       content: (
         <div>
-          <p className="text-neutral-800 dark:text-neutral-900 text-xs md:text-sm font-normal mb-8">
-            I usually run out of copy, but when I see content this big, I try to
-            integrate lorem ipsum.
+          <p className="text-neutral-800 dark:text-neutral-900 text-lg md:text-xl font-medium mb-8 text-start">
+            Book a free pickup from your home or work at a time slot that best
+            suits your convenience. call directly.
           </p>
-          <p className="text-neutral-800 dark:text-neutral-800 text-xs md:text-sm font-normal mb-8">
-            Lorem ipsum is for people who are too lazy to write copy. But we are
-            not. Here are some more example of beautiful designs I built.
-          </p>
-          <div className="grid grid-cols-2 gap-4">
+
+          <div className="w-full h-full flex items-center justify-center gap-4">
             <Image
-              src=""
-              alt="hero template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
+              src={step20}
+              alt="farmerhappy"
+              width="350"
+              height="350"
+              placeholder="blur"
+              className="rounded-lg"
+            ></Image>
             <Image
-              src=""
-              alt="feature template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src=""
-              alt="bento template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src=""
-              alt="cards template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
+              src={step21}
+              alt="farmerhappy"
+              width="350"
+              height="350"
+              placeholder="blur"
+              className="rounded-lg hidden lg:block"
+            ></Image>
           </div>
         </div>
       ),
     },
     {
-      title: "Changelog",
+      title: "Use it",
       content: (
         <div>
-          <p className="text-neutral-800 dark:text-neutral-800 text-xs md:text-sm font-normal mb-4">
-            Deployed 5 new components on Aceternity today
+          <p className="text-neutral-800 dark:text-neutral-800 text-lg md:text-xl font-medium mb-4">
+            Did we mention you get paid as soon as soon as they picks up your
+            equipment? It&apos;s instant payment all the way!
           </p>
-          <div className="mb-8">
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Card grid component
+          <div className="w-full h-full flex items-center justify-center gap-4">
+            <div className="flex flex-col gap-4">
+              <Image
+                src={step30}
+                alt="farmerhappy"
+                width="350"
+                height="350"
+                placeholder="blur"
+                className="rounded-lg  lg:block hidden"
+              ></Image>
+              <Image
+                src={step31}
+                alt="farmerhappy"
+                width="350"
+                height="350"
+                placeholder="blur"
+                className="rounded-lg lg:block hidden"
+              ></Image>
             </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Startup template Aceternity
-            </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Random file upload lol
-            </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Himesh Reshammiya Music CD
-            </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Salman Bhai Fan Club registrations open
-            </div>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
             <Image
-              src=""
-              alt="hero template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src=""
-              alt="feature template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src=""
-              alt="bento template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src=""
-              alt="cards template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
+              src={step32}
+              alt="farmerhappy"
+              width="350"
+              height="350"
+              placeholder="blur"
+              className="rounded-lg"
+            ></Image>
           </div>
         </div>
       ),
+    },
+    {
+      title: "Return It",
+      content: (
+        <div>
+          <p className="text-neutral-800 dark:text-neutral-800 text-lg md:text-xl font-medium mb-4">
+            Return is hassle free too. Return and recive a instant refund of
+            advance.
+          </p>
+          <div className="w-full h-full flex items-center justify-center gap-4">
+            <Image
+              src={return2}
+              alt="farmerhappy"
+              width="350"
+              height="350"
+              placeholder="blur"
+              className="rounded-lg"
+            ></Image>
+            <Image
+              src={return1}
+              alt="farmerhappy"
+              width="350"
+              height="350"
+              placeholder="blur"
+              className="rounded-lg hidden lg:block"
+            ></Image>
+          </div>
+        </div>
+      ),
+    },
+  ];
+
+  const faqs = [
+    {
+      question: "What is a FAQ?",
+      answer:
+        "A FAQ is a list of frequently asked questions and answers on a particular topic.",
+    },
+    {
+      question: "What is the purpose of a FAQ?",
+      answer:
+        "The purpose of a FAQ is to provide answers to common questions and help users find the information they need quickly and easily.",
+    },
+    {
+      question: "How do I create a FAQ?",
+      answer:
+        "To create a FAQ, you need to compile a list of common questions and answers on a particular topic and organize them in a clear and easy-to-navigate format.",
+    },
+    {
+      question: "What are the benefits of a FAQ?",
+      answer:
+        "The benefits of a FAQ include providing quick and easy access to information, reducing the number of support requests, and improving the overall user experience.",
+    },
+  ];
+
+  const testimonials = [
+    {
+      name: "John Doe",
+      role: "CEO & Founder",
+      avatar: "/images/block/avatar-1.webp",
+      content:
+        "Lorem ipsum dolor sit, amet Odio, incidunt.  id ut omnis repellat. Lorem ipsum dolor sit, amet Odio, incidunt. Ratione, ullam? Iusto id ut omnis.",
+    },
+    {
+      name: "Jane Doe",
+      role: "CTO",
+      avatar: "/images/block/avatar-2.webp",
+      content:
+        "Lorem ipsum dolor sit, amet Odio, incidunt. Ratione, ullam? Iusto id ut omnis repellat. Lorem ipsum dolor sit, amet Odio, incidunt. Ratione, ullam? Iusto id ut omnis repellat.",
+    },
+    {
+      name: "John Smith",
+      role: "COO",
+      avatar: "/images/block/avatar-3.webp",
+      content:
+        "Lorem ipsum dolor sit, amet Odio, incidunt. Ratione, ullam? Iusto id ut omnis repellat. Lorem ipsum dolor sit.",
+    },
+    {
+      name: "Jane Smith",
+      role: "Tech Lead",
+      avatar: "/images/block/avatar-4.webp",
+      content:
+        "Lorem ipsum dolor sit, amet Odio, incidunt. Ratione, ullam? Iusto id ut omnis repellat. incidunt. Ratione, ullam? Iusto id ut omnis repellat ratione.",
+    },
+    {
+      name: "Richard Doe",
+      role: "Designer",
+      avatar: "/images/block/avatar-5.webp",
+      content:
+        "Lorem ipsum dolor sit, amet Odio, incidunt. Ratione, ullam? Iusto id ut omnis repellat.",
+    },
+    {
+      name: "Gordon Doe",
+      role: "Developer",
+      avatar: "/images/block/avatar-6.webp",
+      content:
+        "Lorem ipsum dolor sit, amet Odio, incidunt. Ratione, ullam? Iusto id ut omnis repellat. Lorem ipsum dolor sit, amet Odio, incidunt. Ratione, ullam? Iusto id ut omnis repellat.",
     },
   ];
 
@@ -176,7 +302,7 @@ export default function Home() {
             </Button>
             <Button
               variant={"outline"}
-              className="bg-transparent border-lime-600 text-lime-800 hover:bg-lime-300"
+              className="bg-transparent border-lime-600 text-lime-800 hover:bg-lime-500"
             >
               Rent yours
               <Send />
@@ -189,13 +315,13 @@ export default function Home() {
               width={850}
               height={850}
               placeholder="blur"
-              className="object-cover w- h-[390px] rounded-t-xl"
+              className="object-cover w- h-[390px] rounded-t-xl shadow-lg"
             />
           </div>
         </div>
       </main>
-      <div className="flex w-full">
-        <div className="w-1/3 p-24 bg-slate-100 flex flex-col text-black">
+      <div className="flex w-full flex-col lg:flex-row justify-center">
+        <div className="lg:w-1/3 p-24 bg-slate-100 flex flex-col text-black lg:border-r md:border-b border-gray-400">
           <h3 className="text-6xl mb-3">10K+</h3>
           <p className="mb-4">
             Thousands of farmers get benifited with every sale. Join them!
@@ -203,14 +329,14 @@ export default function Home() {
           <AvatarCircles numPeople={99} avatarUrls={avatarUrls} />
         </div>
         <span className="text-black"></span>
-        <div className="w-1/3 p-24 bg-slate-100 text-black border-l border-gray-400">
+        <div className="lg:w-1/3 p-24 bg-slate-100 text-black">
           <h3 className="text-6xl mb-3">4/5</h3>
           <p className="mb-4">
             Farmers finds what they want, Explore our users review:
           </p>
           <div className="flex gap-3">
-            <Button className="text-white bg-black hover:bg-black/90">
-              <MessageSquareHeart className="hover:bg-yellow-200" />
+            <Button className="flex overflow-hidden items-center text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-black text-white shadow hover:bg-black/90 h-9 py-2 whitespace-pre md:flex group relative justify-center rounded-md transition-all duration-300 ease-out hover:ring-2 hover:ring-black">
+              <MessageSquareHeart className="h-4 text-gray-500 transition-all duration-300 group-hover:text-yellow-300" />
               See Reviews
             </Button>
 
@@ -233,7 +359,7 @@ export default function Home() {
             </Button>
           </div>
         </div>
-        <div className="w-1/3 p-24 bg-lime-600">
+        <div className="lg:w-1/3 p-24 bg-lime-600">
           <Button className="rounded-3xl mb-8">
             <Share2 />
             Community
@@ -247,21 +373,23 @@ export default function Home() {
         </div>
       </div>
       <div className="flex flex-col py-12 px-28 bg-white text-black">
-        <div className="flex justify-between">
-          <h3 className="max-w-3xl text-6xl font-medium">
-            Explore easily and trusted with ...!
+        <div className="flex justify-between lg:flex-row md:flex-col my-12">
+          <h3 className="max-w-3xl text-5xl lg:text-6xl font-medium mb-2">
+            Explore how to use Agri Rental its easy !
           </h3>
           <p className="text-xl max-w-2xl pt-3">
             our services are designed to help you find quality goods and take
-            your experience to a new level. The following are the charming
-            features provided by ...:
+            your exp to a new level. The following are the steps you need to
+            follow to get what you want:
           </p>
         </div>
-        <Timeline data={data} />
+        <div className="">
+          <Timeline data={data} />
+        </div>
       </div>
-      <div className="flex flex-col py-12 px-28 bg-background">
-        <div className="flex justify-between">
-          <h3 className="max-w-3xl text-6xl font-medium">
+      <div className="flex flex-col py-12 px-28 bg-white text-black">
+        <div className="flex justify-between lg:flex-row md:flex-col">
+          <h3 className="max-w-3xl text-5xl lg:text-6xl font-medium">
             Make transaction easily and trusted with ...!
           </h3>
           <p className="text-xl max-w-2xl pt-3">
@@ -270,18 +398,191 @@ export default function Home() {
             features provided by ...:
           </p>
         </div>
-      </div>
-      <div>
-        <div>
-          <h3>Frequently Aksed Questions(FAQ)</h3>
-          <p>
-            Welcome to our FAQ section we adress common queries about everything
-            about ... to help make informed decisions
-          </p>
-          <div></div>
+        <div className="flex gap-12 flex-col lg:flex-row">
+          <div className="flex mt-12 bg-lime-700 w-full lg:w-1/2 rounded-2xl pt-12 px-8 flex-col gap-6">
+            <p className="text-white text-2xl font-medium">
+              All your transactions are secured by RazorPay
+            </p>
+            <p className="text-white/60 text-lg">
+              It helps processes online payments for online as well as offline
+              businesses. Razorpay allows you to accept credit cards, debit
+              cards, netbanking, wallet, and UPI payments with the Mobile App
+              integration
+            </p>
+            <div className="flex w-full items-center justify-center mt-3 ">
+              <Iphone15Pro className="" src="../public/farmerStep1.png" />
+            </div>
+            {/* <div className="relative">
+            <Iphone15Pro
+              className="size-full"
+              src="https://via.placeholder.com/430x880"
+            />
+          </div> */}
+          </div>
+          <div className="flex mt-12 bg-lime-700 w-full lg:w-1/2 rounded-2xl pt-12 px-8 flex-col gap-6">
+            <p className="text-white text-2xl font-medium">
+              Test First before buying
+            </p>
+            <p className="text-white/60 text-lg">
+              We Provide features for those of you who want to ensure that the
+              vehicle you want to rent is what you want and can be used
+              properly.
+            </p>
+            <div className="flex w-full items-center justify-center mt-3">
+              <Iphone15Pro className="" src="../public/farmerStep1.png" />
+            </div>
+            {/* <div className="relative">
+            <Iphone15Pro
+              className="size-full"
+              src="https://via.placeholder.com/430x880"
+            />
+          </div> */}
+          </div>
         </div>
-        <div></div>
       </div>
+      <div className="w-full bg-white flex items-center justify-center text-black">
+        <section className="py-12 px-28">
+          <div className="container bg-white">
+            <Carousel className="w-full">
+              <div className="mb-8 flex justify-between px-1 lg:mb-12">
+                <h2 className="text-5xl font-medium lg:text-6xl">
+                  Why Clients Love Us
+                </h2>
+                <div className="flex items-center space-x-2">
+                  <CarouselPrevious className="static translate-y-0 bg-white" />
+                  <CarouselNext className="static translate-y-0 bg-white" />
+                </div>
+              </div>
+              <CarouselContent>
+                {testimonials.map((testimonial, idx) => (
+                  <CarouselItem
+                    key={idx}
+                    className="basis-full md:basis-1/2 lg:basis-1/3"
+                  >
+                    <div className="h-full p-1">
+                      <div className="flex h-full flex-col justify-between rounded-lg border p-6">
+                        <q className="leading-7 text-black text-lg">
+                          {testimonial.content}
+                        </q>
+                        <div className="mt-6 flex gap-4 leading-5">
+                          <Avatar className="size-9 rounded-full ring-1 ring-input ">
+                            <AvatarImage
+                              src={testimonial.avatar}
+                              alt={testimonial.name}
+                            />
+                          </Avatar>
+                          <div className="text-sm">
+                            <p className="font-medium">{testimonial.name}</p>
+                            <p className="text-muted-foreground">
+                              {testimonial.role}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+          </div>
+        </section>
+      </div>
+      <div
+        className="w-full flex items-center justify-center py-12 px-28 b bg-white
+        text-black"
+      >
+        <div className=" flex justify-between w-full gap-16 lg:flex-row md:flex-col">
+          <div className="w-1/2 md:w-full max-w-3xl flex flex-col gap-10">
+            <h3 className="text-6xl font-medium">Frequently Aksed Questions</h3>
+            <p className="text-xl">
+              Welcome to our FAQ section we adress common queries about
+              everything about ... to help make informed decisions.
+            </p>
+            <div className="flex justify-between w-full gap-6">
+              <input
+                placeholder="Enter your email..."
+                className="rounded-full bg-white border p-3 text-black w-full"
+                type="email"
+              ></input>
+              <Button className="bg-lime-500 hover:bg-lime-600 rounded-full p-6 text-white">
+                Submit
+              </Button>
+            </div>
+          </div>
+          <div className="w-1/2 md:w-full px-8">
+            {faqs.map((faq, index) => (
+              <Accordion key={index} type="single" collapsible>
+                <AccordionItem value={`item-${index}`}>
+                  <AccordionTrigger className="hover:text-background/60 hover:no-underline text-xl">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-lg">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            ))}
+          </div>
+        </div>
+      </div>
+      <footer className="bg-gradient-to-b from-lime-700 via-lime-600 to-lime-300 flex items-center w-full justify-center py-12 px-28 flex-col">
+        <div className="flex justify-between w-full pb-6">
+          <div className="flex gap-4 w-full flex-col max-w-3xl">
+            <div className="flex items-center gap-3">
+              <a className="block text-black dark:text-white" href="/">
+                <svg
+                  className="h-8 sm:h-10"
+                  viewBox="0 0 28 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.41 10.3847C1.14777 7.4194 2.85643 4.7861 5.2639 2.90424C7.6714 1.02234 10.6393 0 13.695 0C16.7507 0 19.7186 1.02234 22.1261 2.90424C24.5336 4.7861 26.2422 7.4194 26.98 10.3847H25.78C23.7557 10.3549 21.7729 10.9599 20.11 12.1147C20.014 12.1842 19.9138 12.2477 19.81 12.3047H19.67C19.5662 12.2477 19.466 12.1842 19.37 12.1147C17.6924 10.9866 15.7166 10.3841 13.695 10.3841C11.6734 10.3841 9.6976 10.9866 8.02 12.1147C7.924 12.1842 7.8238 12.2477 7.72 12.3047H7.58C7.4762 12.2477 7.376 12.1842 7.28 12.1147C5.6171 10.9599 3.6343 10.3549 1.61 10.3847H0.41ZM23.62 16.6547C24.236 16.175 24.9995 15.924 25.78 15.9447H27.39V12.7347H25.78C24.4052 12.7181 23.0619 13.146 21.95 13.9547C21.3243 14.416 20.5674 14.6649 19.79 14.6649C19.0126 14.6649 18.2557 14.416 17.63 13.9547C16.4899 13.1611 15.1341 12.7356 13.745 12.7356C12.3559 12.7356 11.0001 13.1611 9.86 13.9547C9.2343 14.416 8.4774 14.6649 7.7 14.6649C6.9226 14.6649 6.1657 14.416 5.54 13.9547C4.4144 13.1356 3.0518 12.7072 1.66 12.7347H0V15.9447H1.61C2.39051 15.924 3.154 16.175 3.77 16.6547C4.908 17.4489 6.2623 17.8747 7.65 17.8747C9.0377 17.8747 10.392 17.4489 11.53 16.6547C12.1468 16.1765 12.9097 15.9257 13.69 15.9447C14.4708 15.9223 15.2348 16.1735 15.85 16.6547C16.9901 17.4484 18.3459 17.8738 19.735 17.8738C21.1241 17.8738 22.4799 17.4484 23.62 16.6547ZM23.62 22.3947C24.236 21.915 24.9995 21.664 25.78 21.6847H27.39V18.4747H25.78C24.4052 18.4581 23.0619 18.886 21.95 19.6947C21.3243 20.156 20.5674 20.4049 19.79 20.4049C19.0126 20.4049 18.2557 20.156 17.63 19.6947C16.4899 18.9011 15.1341 18.4757 13.745 18.4757C12.3559 18.4757 11.0001 18.9011 9.86 19.6947C9.2343 20.156 8.4774 20.4049 7.7 20.4049C6.9226 20.4049 6.1657 20.156 5.54 19.6947C4.4144 18.8757 3.0518 18.4472 1.66 18.4747H0V21.6847H1.61C2.39051 21.664 3.154 21.915 3.77 22.3947C4.908 23.1889 6.2623 23.6147 7.65 23.6147C9.0377 23.6147 10.392 23.1889 11.53 22.3947C12.1468 21.9165 12.9097 21.6657 13.69 21.6847C14.4708 21.6623 15.2348 21.9135 15.85 22.3947C16.9901 23.1884 18.3459 23.6138 19.735 23.6138C21.1241 23.6138 22.4799 23.1884 23.62 22.3947Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+              <p className="text-2xl">
+                by <span className="font-bold">Agri Rentals</span>
+              </p>
+            </div>
+            <div className="flex items-center text-2xl font-mono font-bold">
+              Quality is our priority
+            </div>
+          </div>
+          <div className="flex justify-between w-full lg:pl-10 text-xl font-medium">
+            <div className="">
+              <p>Home</p>
+              <p>About Us</p>
+              <p>Customers</p>
+              <p>FAQ</p>
+              <p>Contact Us</p>
+            </div>
+            <div className="flex flex-col gap-4">
+              <h4 className="font-semibold">Our address</h4>
+              <p className="max-w-48">
+                main street hitechcity, Hyderabad, India
+              </p>
+            </div>
+            <div className="flex flex-col gap-4">
+              <h4 className="font-semibold">Our Contact</h4>
+              <div>
+                <p>+91 9951207810</p>
+                <p>sai@yahoo.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="w-full p flex justify-between text-lg">
+          <p>Privacy and Policies</p>
+          <p>@2024 ..., All rights reserved.</p>
+          <div className="flex gap-4">
+            <Linkedin className="fill-white" />
+            <Twitter className="fill-white" />
+            <FacebookIcon className="fill-white" />
+          </div>
+        </div>
+      </footer>
     </>
   );
 }

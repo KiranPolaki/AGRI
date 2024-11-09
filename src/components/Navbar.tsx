@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function Navbar() {
   const [active, setActive] = useState<string | null>(null);
   return (
-    <div className="flex w-full h-full items-center justify-between py-8 px-12">
+    <div className="flex w-full h-full items-center justify-between py-8 px-12 ">
       <a className="block text-white" href="/">
         <span className="sr-only">Home</span>
         <svg
@@ -23,7 +23,11 @@ export default function Navbar() {
           />
         </svg>
       </a>
-      <div className={cn("fixed top-10 inset-x-0 max-w-lg mx-auto z-50 ")}>
+      <div
+        className={cn(
+          "fixed top-10 inset-x-0 max-w-lg mx-auto z-50 lg:block hidden"
+        )}
+      >
         <Menu setActive={setActive}>
           <Link href="/">Home</Link>
           <Link href="/">About</Link>

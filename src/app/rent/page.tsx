@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import Categories from "./components/Categories";
 import Search from "./components/Search";
 import { Location } from "./components/Location";
+// import { Card } from "@/components/ui/card";
 
 export default function Rent() {
   return (
@@ -9,7 +10,7 @@ export default function Rent() {
       <div>
         {/* Navbar */}
         <div className="flex w-full h-full items-center justify-between py-6 px-12 border-b-2">
-          <a className="block text-white" href="/">
+          <a className="block text-black dark:text-white" href="/">
             <span className="sr-only">Home</span>
             <svg
               className="h-8 sm:h-10"
@@ -50,7 +51,10 @@ export default function Rent() {
             </div>
           </div>
           <div>
-            <h3>Rent Equipment</h3>
+            <h3 className="text-2xl font-bold">Rent Equipment</h3>
+            <div className="flex">
+              <div></div>
+            </div>
           </div>
           <div></div>
           <div></div>
