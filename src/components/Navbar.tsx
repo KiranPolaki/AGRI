@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Button } from "./ui/button";
-import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
+import { Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
@@ -25,7 +25,7 @@ export default function Navbar() {
       </a>
       <div
         className={cn(
-          "fixed top-10 inset-x-0 max-w-lg mx-auto z-50 lg:block hidden"
+          "fixed top-10 inset-x-0 max-w-lg mx-auto z-50 lg:block hidden text-white"
         )}
       >
         <Menu setActive={setActive}>
@@ -35,41 +35,28 @@ export default function Navbar() {
           <MenuItem setActive={setActive} active={active} item="Products">
             <div className="  text-sm grid grid-cols-2 gap-10 p-4">
               <ProductItem
-                title="Algochurn"
-                href="https://algochurn.com"
-                src=""
-                description="Prepare for tech interviews like never before."
+                title="Pest Control"
+                href="https://th.bing.com/th/id/OIP.1lulvFb35D1Gp9KPG1NXVAHaEK?w=276&h=180&c=7&r=0&o=5&dpr=2&pid=1.7"
+                description="Products for managing pests in farming."
               />
               <ProductItem
-                title="Tailwind Master Kit"
+                title="Seeds and Fertilizers"
                 href="https://tailwindmasterkit.com"
-                src=""
-                description="Production ready Tailwind css components for your next project"
+                description="Various seeds and fertilizers for crop production."
               />
               <ProductItem
-                title="Moonbeam"
+                title="Equipment Accessories"
                 href="https://gomoonbeam.com"
-                src=""
-                description="Never write from scratch again. Go from idea to blog in minutes."
+                description="Accessories and parts for farming equipment."
               />
               <ProductItem
-                title="Rogue"
+                title="Random"
                 href="https://userogue.com"
-                src=""
-                description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+                description="Any Other related products which are unlisted"
               />
             </div>
           </MenuItem>
-          <MenuItem setActive={setActive} active={active} item="Services">
-            <div className="flex flex-col space-y-4 text-sm">
-              <HoveredLink href="/web-dev">Web Development</HoveredLink>
-              <HoveredLink href="/interface-design">
-                Interface Design
-              </HoveredLink>
-              <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
-              <HoveredLink href="/branding">Branding</HoveredLink>
-            </div>
-          </MenuItem>
+
           <Link href={"/contacts"}>Contact</Link>
         </Menu>
       </div>
