@@ -1,16 +1,12 @@
-import { Button } from "@/components/ui/button";
 import Categories from "./components/Categories";
 import Search from "./components/Search";
 import { Location } from "./components/Location";
-import { redirect } from "next/navigation";
 import Link from "next/link";
-// import { Card } from "@/components/ui/card";
 
 export default function RentList() {
   return (
     <div className="w-full">
       <div>
-        {/* Navbar */}
         <div className="flex w-full h-full items-center justify-between py-6 px-12 border-b-2">
           <a className="block text-black dark:text-white" href="/">
             <span className="sr-only">Home</span>
@@ -31,17 +27,15 @@ export default function RentList() {
           </div>
           <div className="flex items-center gap-4">
             <Location />
-            {/* make it dynamic to diplsy signin and login */}
             <Link
               className="bg-lime-700 hover:bg-lime-600 text-white"
               href={"/signin"}
             >
               Login
-            </>
+            </Link>
           </div>
         </div>
         <div className="w-full flex items-center justify-center p-2 border-b-2 ">
-          {/* Catergories */}
           <Categories />
         </div>
         <div>

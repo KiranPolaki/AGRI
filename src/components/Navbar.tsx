@@ -1,10 +1,10 @@
 "use client";
 import { useState } from "react";
-import { Button } from "./ui/button";
+// import { Button } from "./ui/button";
 import { Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { redirect } from "next/navigation";
+// import { redirect } from "next/navigation";
 
 export default function Navbar() {
   const [active, setActive] = useState<string | null>(null);
