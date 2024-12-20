@@ -1,17 +1,15 @@
 "use client";
-import { useState } from "react";
-import { Button } from "./ui/button";
-import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
-import { cn } from "@/lib/utils";
-import Link from "next/link";
-import { signIn, useSession } from "next-auth/react";
 
-export default function Navbar() {
-  const [active, setActive] = useState<string | null>(null);
+import { Button } from "@/components/ui/button";
+import { signIn, signOut, useSession } from "next-auth/react";
+import { Location } from "./Location";
+import { redirect } from "next/navigation";
 
+export default function DashboardNavBar() {
+  const session = useSession();
   return (
-    <div className="flex w-full h-full items-center justify-between py-8 px-12 ">
-      <a className="block text-white" href="/">
+    <div className="flex w-full h-full items-center justify-between py-6 px-12 border-b-2">
+      <a className="block text-black dark:text-white" href="/">
         <span className="sr-only">Home</span>
         <svg
           className="h-8 sm:h-10"
@@ -25,63 +23,35 @@ export default function Navbar() {
           />
         </svg>
       </a>
-      <div
-        className={cn(
-          "fixed top-10 inset-x-0 max-w-lg mx-auto z-50 lg:block hidden text-white"
+      <div className="w-full lg:ml-44 mx-4">{/* <Search /> */}</div>
+      <div className="flex items-center gap-4">
+        <Location />
+        {/* make it dynamic to diplsy signin and login */}
+        {session?.status === "unauthenticated" ? (
+          <Button
+            className="bg-lime-700 hover:bg-lime-600 text-white"
+            onClick={() => signIn()}
+          >
+            Sign In
+          </Button>
+        ) : (
+          <Button
+            className="bg-lime-700 hover:bg-lime-600 text-white"
+            onClick={() => signOut()}
+          >
+            Sign Out
+          </Button>
         )}
-      >
-        <Menu setActive={setActive}>
-          <Link href="/">Home</Link>
-          <Link href="/">About</Link>
-
-          <MenuItem setActive={setActive} active={active} item="Products">
-            <div className="  text-sm grid grid-cols-2 gap-10 p-4">
-              <ProductItem
-                title="Algochurn"
-                href="https://algochurn.com"
-                src=""
-                description="Prepare for tech interviews like never before."
-              />
-              <ProductItem
-                title="Tailwind Master Kit"
-                href="https://tailwindmasterkit.com"
-                src=""
-                description="Production ready Tailwind css components for your next project"
-              />
-              <ProductItem
-                title="Moonbeam"
-                href="https://gomoonbeam.com"
-                src=""
-                description="Never write from scratch again. Go from idea to blog in minutes."
-              />
-              <ProductItem
-                title="Rogue"
-                href="https://userogue.com"
-                src=""
-                description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
-              />
-            </div>
-          </MenuItem>
-          <MenuItem setActive={setActive} active={active} item="Services">
-            <div className="flex flex-col space-y-4 text-sm">
-              <HoveredLink href="/web-dev">Rentals Services</HoveredLink>
-              <HoveredLink href="/interface-design">Suggestions</HoveredLink>
-              <HoveredLink href="/seo">Recommended</HoveredLink>
-            </div>
-          </MenuItem>
-          <Link href={"/contacts"}>Contact</Link>
-        </Menu>
-      </div>
-      {status ? (
         <Button
           className="bg-lime-700 hover:bg-lime-600 text-white"
-          onClick={() => signIn()}
+          onClick={() =>
+            signIn("github", { redirectTo: "/rent", page: "/signin" })
+          }
         >
-          Login
+          {/* TODO: instead of using using the sigin() i will use the page and tghere i will pass a redirect url to where it should redirect */}
+          Rent it
         </Button>
-      ) : (
-        <></>
-      )}
+      </div>
     </div>
   );
 }
