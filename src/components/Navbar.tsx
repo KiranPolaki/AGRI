@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import { Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
 export default function Navbar() {
   const [active, setActive] = useState<string | null>(null);
@@ -60,9 +61,12 @@ export default function Navbar() {
           <Link href={"/contacts"}>Contact</Link>
         </Menu>
       </div>
-      <Button className="bg-lime-700 hover:bg-lime-600 text-white">
+      <Link
+        className="bg-white hover:bg-lime-600 text-white z-20 px-5 py-2"
+        href={"signin"}
+      >
         Login
-      </Button>
+      </Link>
     </div>
   );
 }

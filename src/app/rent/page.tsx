@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import Categories from "./components/Categories";
 import Search from "./components/Search";
 import { Location } from "./components/Location";
+import { redirect } from "next/navigation";
+import Link from "next/link";
 // import { Card } from "@/components/ui/card";
 
 export default function Rent() {
@@ -30,9 +32,12 @@ export default function Rent() {
           <div className="flex items-center gap-4">
             <Location />
             {/* make it dynamic to diplsy signin and login */}
-            <Button className="bg-lime-700 hover:bg-lime-600 text-white">
+            <Link
+              className="bg-lime-700 hover:bg-lime-600 text-white"
+              href={"/signin"}
+            >
               Login
-            </Button>
+            </>
           </div>
         </div>
         <div className="w-full flex items-center justify-center p-2 border-b-2 ">
