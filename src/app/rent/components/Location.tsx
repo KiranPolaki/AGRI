@@ -16,6 +16,17 @@ import { MapPin, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+import one from "@/public/1.svg";
+import two from "@/public/2.svg";
+import three from "@/public/3.svg";
+import four from "@/public/4.svg";
+import five from "@/public/5.svg";
+import six from "@/public/6.svg";
+import seven from "@/public/7.svg";
+import eight from "@/public/8.svg";
+import nine from "@/public/9.svg";
+import Image from "next/image";
+
 export function Location() {
   const [cities, setCities] = useState<string[]>([]);
   useEffect(() => {
@@ -38,15 +49,15 @@ export function Location() {
       .sort();
   };
   const popularCities = [
-    { name: "Banglore", icon: "" },
-    { name: "Chennai", icon: "" },
-    { name: "Delhi", icon: "" },
-    { name: "Gurgaon", icon: "" },
-    { name: "Hyderabad", icon: "" },
-    { name: "Kolkata", icon: "" },
-    { name: "Mumbai", icon: "" },
-    { name: "Noida", icon: "" },
-    { name: "Pune", icon: "" },
+    { name: "Banglore", icon: one },
+    { name: "Chennai", icon: two },
+    { name: "Delhi", icon: three },
+    { name: "Gurgaon", icon: four },
+    { name: "Hyderabad", icon: five },
+    { name: "Kolkata", icon: six },
+    { name: "Mumbai", icon: seven },
+    { name: "Noida", icon: eight },
+    { name: "Pune", icon: nine },
   ];
   const [showAllCities, setShowAllCities] = useState<boolean>(false);
 
@@ -77,14 +88,20 @@ export function Location() {
           </DrawerHeader>
           <div className="p-4 pb-0 w-full">
             {!showAllCities ? (
-              <div>
-                <DrawerTitle>Popular cities</DrawerTitle>
+              <div className="py-4 flec flex-col items-center justify-center w-full">
+                <DrawerTitle className="text-center">
+                  Popular cities
+                </DrawerTitle>
                 <div className="mt-3 h-[150px] flex flex-col items-center justify-between">
-                  <div className="flex w-full gap-10 flex-wrap md:gap-3">
+                  <div className="flex w-full gap-10 flex-wrap md:gap-3 items-center">
                     {popularCities.map((city, i) => {
                       return (
                         <div key={`city${i}`} className="flex flex-col">
-                          {city?.icon}
+                          <Image
+                            src={city?.icon}
+                            alt={city?.name}
+                            className="size-32"
+                          ></Image>
                           <p>{city?.name}</p>
                         </div>
                       );

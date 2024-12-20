@@ -62,12 +62,20 @@ export default function Navbar() {
           <Link href={"/contacts"}>Contact</Link>
         </Menu>
       </div>
-      <Link
-        className="bg-white hover:bg-lime-600 text-white z-20 px-5 py-2"
-        href={"signin"}
-      >
-        Login
-      </Link>
+      <div className="flex items-center gap-6">
+        <Link
+          className="bg-lime-600 hover:bg-lime-600/45 border border-white text-white z-20 px-6 py-3 rounded-lg"
+          href={"/rent"}
+        >
+          Rent
+        </Link>
+        <Link
+          className="bg-white hover:bg-white/45 text-black z-20 px-6 py-3 rounded-lg"
+          href={"signin"}
+        >
+          Login
+        </Link>
+      </div>
     </div>
   );
 }
