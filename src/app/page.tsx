@@ -16,9 +16,9 @@ import { Timeline } from "@/components/ui/timeline";
 import farmer from "../public/farmerStep1.png";
 import step20 from "../public/step2.png";
 import step21 from "../public/step21.png";
-import step30 from "../public/farm-social-1.jpg";
-import step31 from "../public/farmspary.jpg";
-import step32 from "../public/pump.png";
+// import step30 from "../public/farm-social-1.jpg";
+// import step31 from "../public/farmspary.jpg";
+// import step32 from "../public/pump.png";
 import step1 from "../public/step1.jpg";
 import step12 from "../public/step12.jpg";
 import return2 from "../public/return2.png";
@@ -56,36 +56,6 @@ export default function Home() {
             Select your Equipemnt & tell us about its current condition, and our
             advanced AI tech will tailor make the perfect price for you.
           </p>
-          {/* <div className="grid grid-cols-2 gap-4">
-            <Image
-              src=""
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src=""
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src=""
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src=""
-              alt="startup template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-          </div> */}
           <div className="w-full h-full flex items-center justify-center gap-4">
             <Image
               src={farmer}
@@ -118,7 +88,7 @@ export default function Home() {
       ),
     },
     {
-      title: "Rent it",
+      title: "Rent it & Use it",
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-900 text-lg md:text-xl font-medium mb-8 text-start">
@@ -142,45 +112,6 @@ export default function Home() {
               height="350"
               placeholder="blur"
               className="rounded-lg hidden lg:block"
-            ></Image>
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "Use it",
-      content: (
-        <div>
-          <p className="text-neutral-800 dark:text-neutral-800 text-lg md:text-xl font-medium mb-4">
-            Did we mention you get paid as soon as soon as they picks up your
-            equipment? It&apos;s instant payment all the way!
-          </p>
-          <div className="w-full h-full flex items-center justify-center gap-4">
-            <div className="flex flex-col gap-4">
-              <Image
-                src={step30}
-                alt="farmerhappy"
-                width="350"
-                height="350"
-                placeholder="blur"
-                className="rounded-lg  lg:block hidden"
-              ></Image>
-              <Image
-                src={step31}
-                alt="farmerhappy"
-                width="350"
-                height="350"
-                placeholder="blur"
-                className="rounded-lg lg:block hidden"
-              ></Image>
-            </div>
-            <Image
-              src={step32}
-              alt="farmerhappy"
-              width="350"
-              height="350"
-              placeholder="blur"
-              className="rounded-lg"
             ></Image>
           </div>
         </div>
@@ -219,69 +150,99 @@ export default function Home() {
 
   const faqs = [
     {
-      question: "What is a FAQ?",
+      question: "What is Agrid Rental?",
       answer:
-        "A FAQ is a list of frequently asked questions and answers on a particular topic.",
+        "Agrid Rental is an app that connects farmers and agricultural professionals with rental services for various farming equipment, making it easier to access the tools you need.",
     },
     {
-      question: "What is the purpose of a FAQ?",
+      question: "How do I rent equipment?",
       answer:
-        "The purpose of a FAQ is to provide answers to common questions and help users find the information they need quickly and easily.",
+        "To rent equipment, simply browse the available listings, select the equipment you need, choose the rental period, and complete the booking process through the app.",
     },
     {
-      question: "How do I create a FAQ?",
+      question: "What types of equipment are available?",
       answer:
-        "To create a FAQ, you need to compile a list of common questions and answers on a particular topic and organize them in a clear and easy-to-navigate format.",
+        "Our app offers a wide range of agricultural equipment, including tractors, plows, harvesters, irrigation systems, and more.",
     },
     {
-      question: "What are the benefits of a FAQ?",
+      question: "Is the equipment insured?",
       answer:
-        "The benefits of a FAQ include providing quick and easy access to information, reducing the number of support requests, and improving the overall user experience.",
+        "Yes, all equipment rented through Agrid Rental is insured. You can find detailed insurance information in the equipment listing.",
+    },
+    {
+      question: "How do I return the equipment?",
+      answer:
+        "You can return the equipment by coordinating with the rental service provider through the app. Follow the instructions provided at the time of booking.",
+    },
+    {
+      question: "What happens if the equipment is damaged?",
+      answer:
+        "If the equipment is damaged during the rental period, please contact the rental service provider immediately. They will guide you through the steps for repair or replacement.",
+    },
+    {
+      question: "Can I extend the rental period?",
+      answer:
+        "Yes, you can request an extension through the app. Please note that extension requests are subject to availability and may incur additional charges.",
+    },
+    {
+      question: "How do I contact customer support?",
+      answer:
+        "For any assistance or inquiries, you can contact our customer support team through the app's support section or by emailing support@agridrental.com.",
+    },
+    {
+      question: "Are there any membership or subscription fees?",
+      answer:
+        "No, there are no membership or subscription fees to use Agrid Rental. You only pay for the equipment you rent.",
+    },
+    {
+      question: "How do I list my equipment for rent?",
+      answer:
+        "To list your equipment for rent, register as a service provider on the app, create a listing with details and photos of your equipment, and set your rental rates.",
     },
   ];
 
   const testimonials = [
     {
-      name: "John Doe",
-      role: "CEO & Founder",
+      name: "Ravi Kumar",
+      role: "Farmer",
       avatar: "/images/block/avatar-1.webp",
       content:
-        "Lorem ipsum dolor sit, amet Odio, incidunt.  id ut omnis repellat. Lorem ipsum dolor sit, amet Odio, incidunt. Ratione, ullam? Iusto id ut omnis.",
+        "Agrid Rental has been a game changer for me. The app makes it so easy to get the equipment I need without any hassle. Highly recommend!",
     },
     {
-      name: "Jane Doe",
-      role: "CTO",
+      name: "Priya Singh",
+      role: "Agricultural Consultant",
       avatar: "/images/block/avatar-2.webp",
       content:
-        "Lorem ipsum dolor sit, amet Odio, incidunt. Ratione, ullam? Iusto id ut omnis repellat. Lorem ipsum dolor sit, amet Odio, incidunt. Ratione, ullam? Iusto id ut omnis repellat.",
+        "This app has streamlined our operations significantly. The variety of equipment available is impressive, and the customer service is top-notch.",
     },
     {
-      name: "John Smith",
-      role: "COO",
+      name: "Arjun Verma",
+      role: "Farm Manager",
       avatar: "/images/block/avatar-3.webp",
       content:
-        "Lorem ipsum dolor sit, amet Odio, incidunt. Ratione, ullam? Iusto id ut omnis repellat. Lorem ipsum dolor sit.",
+        "Agrid Rental is incredibly user-friendly and has made renting equipment a breeze. The insurance coverage is a great peace of mind too.",
     },
     {
-      name: "Jane Smith",
-      role: "Tech Lead",
+      name: "Meera Patel",
+      role: "Crop Specialist",
       avatar: "/images/block/avatar-4.webp",
       content:
-        "Lorem ipsum dolor sit, amet Odio, incidunt. Ratione, ullam? Iusto id ut omnis repellat. incidunt. Ratione, ullam? Iusto id ut omnis repellat ratione.",
+        "Finding the right equipment used to be a challenge, but not anymore. Agrid Rental has a great selection and the process is super quick!",
     },
     {
-      name: "Richard Doe",
-      role: "Designer",
+      name: "Rajesh Nair",
+      role: "Agronomist",
       avatar: "/images/block/avatar-5.webp",
       content:
-        "Lorem ipsum dolor sit, amet Odio, incidunt. Ratione, ullam? Iusto id ut omnis repellat.",
+        "I’ve tried a few equipment rental services, but Agrid Rental stands out. The app is intuitive and the support team is always ready to help.",
     },
     {
-      name: "Gordon Doe",
-      role: "Developer",
+      name: "Ananya Sharma",
+      role: "Horticulturist",
       avatar: "/images/block/avatar-6.webp",
       content:
-        "Lorem ipsum dolor sit, amet Odio, incidunt. Ratione, ullam? Iusto id ut omnis repellat. Lorem ipsum dolor sit, amet Odio, incidunt. Ratione, ullam? Iusto id ut omnis repellat.",
+        "As a horticulturist, having access to specialized equipment is crucial. Agrid Rental has made it so much easier to get what I need, when I need it.",
     },
   ];
 
@@ -374,10 +335,10 @@ export default function Home() {
       </div>
       <div className="flex flex-col py-12 px-28 bg-white text-black">
         <div className="flex justify-between lg:flex-row md:flex-col my-12">
-          <h3 className="max-w-3xl text-5xl lg:text-6xl font-medium mb-2">
+          <h3 className="max-w-2xl text-5xl lg:text-6xl font-medium mb-2">
             Explore how to use Agri Rental its easy !
           </h3>
-          <p className="text-xl max-w-2xl pt-3">
+          <p className="text-xl max-w-xl pt-3">
             our services are designed to help you find quality goods and take
             your exp to a new level. The following are the steps you need to
             follow to get what you want:
@@ -389,10 +350,10 @@ export default function Home() {
       </div>
       <div className="flex flex-col py-12 px-28 bg-white text-black">
         <div className="flex justify-between lg:flex-row md:flex-col">
-          <h3 className="max-w-3xl text-5xl lg:text-6xl font-medium">
-            Make transaction easily and trusted with ...!
+          <h3 className="max-w-2xl text-5xl lg:text-6xl font-medium">
+            Make transaction easily and trusted with Razor Pay
           </h3>
-          <p className="text-xl max-w-2xl pt-3">
+          <p className="text-xl max-w-xl pt-3">
             our services are designed to help you find quality goods and take
             your experience to a new level. The following are the charming
             features provided by ...:
@@ -410,14 +371,11 @@ export default function Home() {
               integration
             </p>
             <div className="flex w-full items-center justify-center mt-3 ">
-              <Iphone15Pro className="" src="../public/farmerStep1.png" />
+              <Iphone15Pro
+                className=""
+                src="https://d6xcmfyh68wv8.cloudfront.net/learn-content/uploads/2020/06/Untitled-design-2-770x515.png"
+              />
             </div>
-            {/* <div className="relative">
-            <Iphone15Pro
-              className="size-full"
-              src="https://via.placeholder.com/430x880"
-            />
-          </div> */}
           </div>
           <div className="flex mt-12 bg-gradient-to-b from-lime-600 via-lime-400 to-lime-200 w-full lg:w-1/2 rounded-2xl pt-12 px-8 flex-col gap-6">
             <p className="text-white text-2xl font-medium">
@@ -426,17 +384,17 @@ export default function Home() {
             <p className="text-white/80 text-lg">
               We Provide features for those of you who want to ensure that the
               vehicle you want to rent is what you want and can be used
-              properly. what isthis this is for farmers.
+              properly. Only Buy after testing we proviode services which healp
+              people get better lives
             </p>
             <div className="flex w-full items-center justify-center mt-3">
-              <Iphone15Pro className="" src="../public/farmerStep1.png" />
+              <Iphone15Pro
+                className=""
+                src={
+                  "https://ichef.bbci.co.uk/news/1024/branded_news/16DF2/production/_91528639_p04b0x3b.jpg"
+                }
+              />
             </div>
-            {/* <div className="relative">
-            <Iphone15Pro
-              className="size-full"
-              src="https://via.placeholder.com/430x880"
-            />
-          </div> */}
           </div>
         </div>
       </div>
@@ -446,7 +404,7 @@ export default function Home() {
             <Carousel className="w-full">
               <div className="mb-8 flex justify-between px-1 lg:mb-12">
                 <h2 className="text-5xl font-medium lg:text-6xl">
-                  Why Clients Love Us
+                  Farmers Love
                 </h2>
                 <div className="flex items-center space-x-2">
                   <CarouselPrevious className="static translate-y-0 bg-white" />
@@ -513,7 +471,7 @@ export default function Home() {
             {faqs.map((faq, index) => (
               <Accordion key={index} type="single" collapsible>
                 <AccordionItem value={`item-${index}`}>
-                  <AccordionTrigger className="hover:text-background/60 hover:no-underline text-xl">
+                  <AccordionTrigger className="hover:text-foreground/80 hover:no-underline text-xl font-semibold">
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-lg">
@@ -568,7 +526,7 @@ export default function Home() {
               <h4 className="font-semibold">Our Contact</h4>
               <div>
                 <p>+91 9951207810</p>
-                <p>sai@yahoo.com</p>
+                <p>harsha@gmail.com</p>
               </div>
             </div>
           </div>
