@@ -16,6 +16,48 @@ model User {
   image String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  location String?
   // accounts Account[]
   // sessions Session[]
+  equipment Equipment[] 
+  rentals Rentals[]
+  review Review[]
+}
+
+model Equipment {
+  id String @id @default(cuid())
+  name String
+  description String
+  type String
+  rental_cost_per_day String
+  availability String
+  location String
+  address String
+  lender_id String
+  lender User @relation(fields: [lender_id],references: [id])
+  rentals Rentals[]
+  review Review[]
+}
+
+model Rentals {
+  id String @id @default(cuid())
+  renter_id String
+  equipment_id String
+  start_date String
+  end_date String
+  total_cost Int
+  status String
+  renter User @relation(fields:[renter_id],references:[id])
+  equipment Equipment @relation(fields: [equipment_id],references: [id])
+}
+
+model Review{
+  id String @id @default(cuid())
+  user_id String
+  equipment_id String
+  rating Int?
+  comment String?
+  created_at DateTime @default(now())
+  user User @relation(fields: [user_id],references: [id])
+  equipment Equipment @relation(fields: [equipment_id],references: [id])
 }

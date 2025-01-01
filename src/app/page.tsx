@@ -366,11 +366,11 @@ export default function Home() {
           </p>
         </div>
         <div className="flex gap-12 flex-col lg:flex-row">
-          <div className="flex mt-12 bg-lime-700 w-full lg:w-1/2 rounded-2xl pt-12 px-8 flex-col gap-6">
+          <div className="flex mt-12 bg-gradient-to-b from-lime-600 via-lime-400 to-lime-200 w-full lg:w-1/2 rounded-2xl pt-12 px-8 flex-col gap-6">
             <p className="text-white text-2xl font-medium">
               All your transactions are secured by RazorPay
             </p>
-            <p className="text-white/60 text-lg">
+            <p className="text-white/80 text-lg">
               It helps processes online payments for online as well as offline
               businesses. Razorpay allows you to accept credit cards, debit
               cards, netbanking, wallet, and UPI payments with the Mobile App
@@ -383,11 +383,11 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="flex mt-12 bg-lime-700 w-full lg:w-1/2 rounded-2xl pt-12 px-8 flex-col gap-6">
+          <div className="flex mt-12 bg-gradient-to-b from-lime-600 via-lime-400 to-lime-200 w-full lg:w-1/2 rounded-2xl pt-12 px-8 flex-col gap-6">
             <p className="text-white text-2xl font-medium">
               Test First before buying
             </p>
-            <p className="text-white/60 text-lg">
+            <p className="text-white/80 text-lg">
               We Provide features for those of you who want to ensure that the
               vehicle you want to rent is what you want and can be used
               properly. Only Buy after testing we proviode services which healp
@@ -489,7 +489,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <footer className="bg-gradient-to-b from-lime-700 via-lime-600 to-lime-300 flex items-center w-full justify-center py-12 px-28 flex-col">
+      <footer className="bg-gradient-to-b from-lime-700 via-lime-600 to-lime-300 flex items-center w-full justify-center py-16 px-28 flex-col">
         <div className="flex justify-between w-full pb-6">
           <div className="flex gap-4 w-full flex-col max-w-3xl">
             <div className="flex items-center gap-3">

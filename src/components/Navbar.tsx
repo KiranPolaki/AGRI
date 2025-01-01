@@ -6,6 +6,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   const [active, setActive] = useState<string | null>(null);
+
   return (
     <div className="flex w-full h-full items-center justify-between py-8 px-12 ">
       <a className="block text-white" href="/">
