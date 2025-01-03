@@ -15,7 +15,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "....",
+  title: "Agri Rental",
   description: "one stop for farmer needs",
 };
 
