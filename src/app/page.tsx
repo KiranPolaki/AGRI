@@ -3,15 +3,15 @@ import { Button } from "@/components/ui/button";
 import {
   FacebookIcon,
   Linkedin,
-  MessageSquareHeart,
-  QrCode,
+  // MessageSquareHeart,
+  // QrCode,
   Send,
-  Share2,
+  // Share2,
   Twitter,
 } from "lucide-react";
 import Image from "next/image";
 import master from "../public/signin.jpg";
-import AvatarCircles from "@/components/ui/avatar-circles";
+// import AvatarCircles from "@/components/ui/avatar-circles";
 import { Timeline } from "@/components/ui/timeline";
 import farmer from "../public/farmerStep1.png";
 import step20 from "../public/step2.png";
@@ -41,12 +41,12 @@ import Iphone15Pro from "@/components/ui/iphone-15-pro";
 import Link from "next/link";
 
 export default function Home() {
-  const avatarUrls = [
-    "https://avatars.githubusercontent.com/u/16860528",
-    "https://avatars.githubusercontent.com/u/20110627",
-    "https://avatars.githubusercontent.com/u/106103625",
-    "https://avatars.githubusercontent.com/u/59228569",
-  ];
+  // const avatarUrls = [
+  //   "https://avatars.githubusercontent.com/u/16860528",
+  //   "https://avatars.githubusercontent.com/u/20110627",
+  //   "https://avatars.githubusercontent.com/u/106103625",
+  //   "https://avatars.githubusercontent.com/u/59228569",
+  // ];
 
   const data = [
     {
@@ -54,8 +54,7 @@ export default function Home() {
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-800 text-lg md:text-xl font-medium mb-8">
-            Select your Equipemnt & tell us about its current condition, and our
-            advanced AI tech will tailor make the perfect price for you.
+            Select your Equipemnt & tell us about its current condition.
           </p>
           <div className="w-full h-full flex items-center justify-center gap-4">
             <Image
@@ -284,7 +283,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <div className="flex w-full flex-col lg:flex-row justify-center">
+      {/* <div className="flex w-full flex-col lg:flex-row justify-center">
         <div className="lg:w-1/3 p-24 bg-slate-100 flex flex-col text-black lg:border-r md:border-b border-gray-400">
           <h3 className="text-6xl mb-3">10K+</h3>
           <p className="mb-4">
@@ -335,7 +334,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div
         className="flex flex-col py-12 px-28 bg-white text-black"
         id="explore"
